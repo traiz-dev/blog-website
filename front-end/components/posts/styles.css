@@ -1,0 +1,82 @@
+.card {
+    position: relative;
+    margin-inline: 350px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #b3e9c7;
+    background-color: #edf2f4;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+}
+
+.post-title {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.post-timestamp {
+    position: absolute;
+    color: gray;
+    opacity: 70%;
+    bottom: 0px;
+    right: 15px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: left;
+    border-left: solid #b3e9c7;
+    border-right: solid #b3e9c7;
+    border-bottom: solid #b3e9c7;
+    background-color: #edf2f4;
+    border-radius: 0px 0px 10px 10px;
+    height: 400px;
+}
+
+.post-content {
+    margin-inline: 20px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-weight: medium;
+    text-wrap: wrap;
+    line-height: 25px;
+    color: #212529;
+    max-width: 740px;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    height: 320px;
+}
+
+.post-buttons {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+.edit-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: green; 
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.delete-button:hover, .edit-button:hover {
+    color: gray;
+    transition: 0.3s;
+}

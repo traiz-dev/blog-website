@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.open-modal-button {
+    cursor: pointer;
+    width: 55px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 5px 5px gray;
+}
+
+.open-modal-button:hover {
+    background-color: #e6e6e6;
+    color: black;
+    transition: 0.3s;
+}
