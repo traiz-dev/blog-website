@@ -1,6 +1,7 @@
 .card {
     position: relative;
     margin-inline: 350px;
+    top: 40px;
 }
 
 .card-header {
@@ -78,5 +79,5 @@
 
 .delete-button:hover, .edit-button:hover {
     color: gray;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }

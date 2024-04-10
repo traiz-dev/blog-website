@@ -89,5 +89,5 @@
 .modal-create-button:hover {
     color: black;
     background-color: #eeeeee;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }

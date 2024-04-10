@@ -10,6 +10,15 @@ def get_posts():
     
     return jsonify({"posts": posts_json}), 200
 
+@app.route('/post/<int:post_id>', methods=["GET"])
+def get_post(post_id):
+    post = Post.query.get(post_id)
+    
+    if not post:
+        return jsonify({"message": "There was no post found!"}), 404
+    
+    return jsonify({"post": post.to_json()}), 200
+
 @app.route('/create_post', methods=["POST"])
 def create_post():
     title = request.json.get('title')
