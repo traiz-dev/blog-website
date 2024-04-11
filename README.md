@@ -11,7 +11,7 @@ This is a simple blog website where users can post, login/register, delete posts
 
 ## Technologies Used
 
-- **Frontend**: Vue + React.js
+- **Frontend**: Vite + React.js
 - **Backend**: Flask
 - **Database**: SQLite
 - **Styling**: CSS
@@ -48,7 +48,7 @@ Open your browser and navigate to `http://localhost:[PORT]` to view the blog web
 
 ## Folder Structure
 
-- **fron-tend/**: Contains the Vue + React.js frontend code.
+- **fron-tend/**: Contains the Vite + React.js frontend code.
 - **back-end/**: Contains the Flask backend code.
 
 ## Contributing
