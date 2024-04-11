@@ -1,8 +1,11 @@
-from model import Post
+from sqlite3 import IntegrityError
+from model import Post, User
 from config import app, db
 from flask import request, jsonify
 import datetime
+import bcrypt
 
+# -------------------------------------------------------------- POST API'S --------------------------------------------------------------
 @app.route('/posts', methods=["GET"])
 def get_posts():
     posts = Post.query.all()
@@ -66,7 +69,72 @@ def edit_post(post_id):
     db.session.commit()
     
     return jsonify({"message": "Post edited successfully!"}), 200
+
+# -------------------------------------------------------------- USER API'S --------------------------------------------------------------
+@app.route('/users', methods=['GET'])
+def get_users():
+    users = User.query.all()
+    users_json = list(map(lambda x: x.to_json(), users))
     
+    if not users:
+        return jsonify({"message": "No users found!"}), 404
+    
+    return jsonify({"users": users_json})
+
+@app.route('/register', methods=['POST'])
+def register():
+    email = request.json.get('email')
+    username = request.json.get('username')
+    password = request.json.get('password')
+    
+    salt = bcrypt.gensalt()
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
+    
+    if not email or not username or not password:
+        return jsonify({"message": "You need to include username, email and password in order to create account!"}), 400
+    
+    new_user = User(email = email, username = username, password = hashed_password)
+    try:
+        db.session.add(new_user)
+        db.session.commit()
+    except IntegrityError:
+        db.session.rollback()
+        return jsonify({"message": "Username or email already exists. Please choose another one."}), 409
+    except Exception as e:
+        return jsonify({"message": "There was an error " + str(e)}), 500
+    
+    return jsonify({"message": "User registered successfully!"}), 201
+    
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.json.get('username')
+    password = request.json.get('password')
+    
+    if not username or not password:
+        return jsonify({"message": "You need to include username and password in order to login!"}), 400
+    
+    user = User.query.filter_by(username=username).first()
+    
+    if user and bcrypt.checkpw(password.encode('utf-8'), user.password):
+        return jsonify({"message": "Login successful!"}), 200
+    else:
+        return jsonify({"message": "Login failed! Wrong username or password!"}), 404
+    
+@app.route('/delete_user/<int:user_id>', methods=['DELETE'])
+def delete_user(user_id):
+    user = User.query.get(user_id)
+    
+    if not user:
+        return jsonify({"message": "No user found!"}), 404
+    
+    try:
+        db.session.delete(user)
+        db.session.commit()
+    except Exception as e:
+        return jsonify({"message": "There was an error while deleting user!" + str(e)}), 400
+    
+    return jsonify({"message": "User deleted successfully!"}), 200
+        
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

@@ -13,3 +13,16 @@ class Post(db.Model):
             'content': self.content,
             'createdAt': self.created_at
         }
+        
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True)
+    email = db.Column(db.String(80), unique=True)
+    password = db.Column(db.String(120), unique=False)
+    
+    def to_json(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'email': self.email,
+        }
