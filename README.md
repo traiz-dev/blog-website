@@ -21,7 +21,7 @@ This is a simple blog website where users can post, login/register, delete posts
 1. **Clone the Repository**:
 
 ```
-git clone https://github.com/yourusername/blog-website.git
+git clone https://github.com/traiz-dev/blog-website.git
 cd blog-website
 ```
 
