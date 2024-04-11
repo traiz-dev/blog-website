@@ -1,12 +1,3 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-image: url('background.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
-
 .open-modal-button {
     cursor: pointer;
     width: 55px;
