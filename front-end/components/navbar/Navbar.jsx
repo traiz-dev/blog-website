@@ -3,11 +3,13 @@ import './styles.css'
 
 const Navbar = () => {
   return (
-    <div className='navbar-container'>
-      <a href='/'>Home</a>
-      <a href='/contact'>Contact Us</a>
-    </div>
-  )
+    <>
+      <div className="navbar-container">
+        <a href="/">Home</a>
+        <a href="/contact">Contact Us</a>
+      </div>
+    </>
+  );
 }
 
 export default Navbar

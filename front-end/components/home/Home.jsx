@@ -71,6 +71,7 @@ const Home = () => {
         onClose={closeModal}
         postInfo={modalPostInfo}
       />
+      <a className="login-button" href="/register">Get Started</a>
     </>
   );
 }
