@@ -1,6 +1,8 @@
 # Blog Website
 
 This is a simple blog website where users can post, login/register, delete posts, and edit posts. The frontend is built with `React.js` and the backend is built with `Python`, powered by `Flask`.
+  
+## !!! THE WEBAPP IS STILL IN PRODUCTION, FINAL VERSION PLANNED ON JULY/AUGUST !!!
 
 <img width="1499" alt="Screenshot 2024-04-16 at 20 17 49" src="https://github.com/traiz-dev/blog-website/assets/66207820/e0f51c8d-1727-4364-8da0-2831a5eb20b1">
 
