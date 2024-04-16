@@ -1,6 +1,6 @@
 # Blog Website
 
-This is a simple blog website where users can post, login/register, delete posts, and edit posts. The frontend is built with React.js and the backend is built with Python, powered by Flask.
+This is a simple blog website where users can post, login/register, delete posts, and edit posts. The frontend is built with `React.js` and the backend is built with `Python`, powered by `Flask`.
 
 <img width="1499" alt="Screenshot 2024-04-16 at 20 17 49" src="https://github.com/traiz-dev/blog-website/assets/66207820/e0f51c8d-1727-4364-8da0-2831a5eb20b1">
 
@@ -13,10 +13,10 @@ This is a simple blog website where users can post, login/register, delete posts
 
 ## Technologies Used
 
-- **Frontend**: Vite + React.js
-- **Backend**: Flask
-- **Database**: SQLite
-- **Styling**: CSS
+- **Frontend**: `Vite` + `React.js`
+- **Backend**: `Python`, `Flask`
+- **Database**: `SQLite`
+- **Styling**: `CSS`
 
 ## Setup Instructions
 
@@ -50,8 +50,8 @@ Open your browser and navigate to `http://localhost:[PORT]` to view the blog web
 
 ## Folder Structure
 
-- **fron-tend/**: Contains the Vite + React.js frontend code.
-- **back-end/**: Contains the Flask backend code.
+- **fron-tend/**: Contains the `Vite` + `React.js` frontend code.
+- **back-end/**: Contains the `Python`, `Flask` backend code.
 
 ## Contributing
 
