@@ -15,10 +15,10 @@ This is a simple blog website where users can post, login/register, delete posts
 
 ## Technologies Used
 
-- **Frontend**: `Vite` + `React.js`
-- **Backend**: `Python`, `Flask`
-- **Database**: `SQLite`
-- **Styling**: `CSS`
+- **Frontend Development**: `Vite` + `React.js`
+- **Backend Development**: `Python`, `Flask`
+- **Database Used**: `SQLite`
+- **Styling Used**: `CSS`
 
 ## Setup Instructions
 
