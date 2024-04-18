@@ -9,7 +9,6 @@ const Login = () => {
 
   const onClick = async (e) => {
     e.preventDefault();
-
     try {
       if (!username || !password) {
         toast.error(
@@ -38,7 +37,6 @@ const Login = () => {
     } catch(error) {
       console.error("There was an error " + error)
     }
-
   }
 
   return (
